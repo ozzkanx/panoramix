@@ -187,7 +187,7 @@ def max_to_add(exp):
     for e in exp:
         if type(e) == int:
             m = min(x if type(x) == int else (x[1] if type(x) == tuple and len(x)>1 and type(x[1]) == int else 0) for x in exp)
-                                                # used to be x[1] but 0x0000136DAE58AFCF1EDd2071973d4a7a6fbe98A5 didn't work
+                                                # used to be x[1] but 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a didn't work
             res = ('max', e - m)
             for e2 in exp:
                 if e2 != e:
@@ -887,7 +887,7 @@ def _mask_op(exp, size = 256, offset = 0, shl = 0, shr = 0):
 
         # for shl > 0, we are either dealing with multiplication (e.g. store * 32 - happens often)
         # or with trimming the storage and moving around (store << 96)
-        # e.g. 0xfF18DBc487b4c2E3222d115952bABfDa8BA52F5F, setupToken
+        # e.g. 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a, setupToken
         # below heuristics handle all this, and deliver good results in practice
         # but may be incorrect in some unusual cases
 
