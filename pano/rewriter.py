@@ -119,8 +119,8 @@ def postprocess_trace(line):
         When writing strings to storage, there are usually three cases - when string is 0,
         when string is < 31 (special format that takes just one storage slot), and when string >= 32.
 
-        e.g. 0xf97187f566eC6374cB08470CCe593fF0Dd36d8A9, baseURI
-             0xFcD0d8E3ae34922A2921f7E7065172e5317f8ad8, name
+        e.g. 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a, baseURI
+             0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a, name
 
         The below hides the cases for < 31, and for 0, and shows only for >31. Technically incorrect,
         and I'm not super comfortable with this, but some of the code would be very unreadable without it.
