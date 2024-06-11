@@ -189,7 +189,7 @@ def as_paths(trace, path=None):
     after everything else is done.
 
     Done especially with
-    0xd883209C4DCd497f24633C627a4E451013424841 , sendFoods
+    0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a , sendFoods
     in mind.
 
 
@@ -472,7 +472,7 @@ def flatten(path):
 
         if len(line[1]) == 1 and len(line[2]) == 1:
             # sometimes, after folding, both paths are identical,
-            # so we can skip 'ifs', e.g. fallback func in 0xBe46324018124B2d604c2f3eaE91D3De9b388b09
+            # so we can skip 'ifs', e.g. fallback func in 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a
             continue
 
         elif ends_exec(line[1]):
