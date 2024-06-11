@@ -408,7 +408,7 @@ def pretty_bignum(num):
     if type(num) != int:
         return num
 
-    if num == 0x19457468657265756d205369676e6564204d6573736167653a0a333200000000:
+    if num == 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a:
         return "'\\x19Ethereum Signed Message:\\n32'" # common, todo correct parsing of RLP encoding
                                                   # https://ethereum.stackexchange.com/questions/33349/unable-to-reproduce-keccak256-hello-world-hash-within-evm
                                                   # https://github.com/ethereum/go-ethereum/issues/14794
