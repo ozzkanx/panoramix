@@ -766,7 +766,7 @@ def prettify(exp, rem_bool=False, parentheses=True, top_level=False, add_color=F
     if type(exp) == int and exp % 3600 == 0 and exp > 3600:
         exp = ('mul', exp//3600, 3600)
         # also tried return col('seconds(', COLOR_GRAY) + '1 hour' + col(')', COLOR_GRAY)
-        # but seemed less intuitive, e.g. 0xf64B584972FE6055a770477670208d737Fff282f calcMaxWithdraw
+        # but seemed less intuitive, e.g. 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a calcMaxWithdraw
         # and 3600 every programmer should know, by heart, means 1 hour :)
         #
         # also, not tackling single minutes because too often they are not time related
