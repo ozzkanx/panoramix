@@ -253,7 +253,7 @@ class Contract():
                 return ('cd', 0)
 
             elif exp ~ ('mask_shl', 160, 0, 96, :val):
-                # nasty hack for stuff like 0xF8DFaC6CAe56736FD2a05e45108490C6Cb40147D approve
+                # nasty hack for stuff like 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a approve
                 return ('mask_shl', 160, 0, 0, val)
 
             else:
