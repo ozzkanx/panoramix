@@ -322,8 +322,8 @@ class Function(EasyCopy):
             with a simplified version
 
             test cases: unicorn
-                        0xF7dF66B1D0203d362D7a3afBFd6728695Ae22619 name
-                        0xf8e386EDa857484f5a12e4B5DAa9984E06E73705 version
+                        0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a name
+                        0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a version
 
             if you want to see how it works, turn this func off
             and see how test cases decompile
