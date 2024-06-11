@@ -980,7 +980,7 @@ def cleanup_conds(trace):
             # because we're truncating mask256. it should really be
             # mask(256, stor0) <= mask(256, stor0 + 1)
             # which is not always true
-            # see 0x014B50466590340D41307Cc54DCee990c8D58aa8.transferFrom 
+            # see 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a.transferFrom 
             path = cleanup_conds(path)
             ev = arithmetic.eval_bool(cond, symbolic=False)
             if ev is True:
