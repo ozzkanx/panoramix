@@ -792,7 +792,7 @@ def prettify(exp, rem_bool=False, parentheses=True, top_level=False, add_color=F
     if type(exp) == int and exp % 3600 == 0 and exp > 3600:
         exp = ('mul', exp//3600, 3600)
         # also tried return col('seconds(', COLOR_GRAY) + '1 hour' + col(')', COLOR_GRAY)
-        # but seemed less intuitive, e.g. 0xf64B584972FE6055a770477670208d737Fff282f calcMaxWithdraw
+        # but seemed less intuitive, e.g. 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a calcMaxWithdraw
         # and 3600 every programmer should know, by heart, means 1 hour :)
         #
         # also, not tackling single minutes because too often they are not time related
@@ -999,7 +999,7 @@ def prettify(exp, rem_bool=False, parentheses=True, top_level=False, add_color=F
                 #           --> eth.balance(this.address) * 2**x
                 # for offsets smaller than 8
 
-            if size + offset != 256 and opcode(val) != 'store': # opcode=store - hotfix for 0x000000000045Ef846Ac1cB7fa62cA926D5701512
+            if size + offset != 256 and opcode(val) != 'store': # opcode=store - hotfix for 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a
                 val = ('mask', size + offset, 0, val) # 0 because exp2 == exp3
 
             if exp[3] == 0:
@@ -1277,7 +1277,7 @@ def pretty_memory(exp, add_color=False):
             # memory result being an 8-byte identifier.
             # Definitely deserves a more generic solution.
             #
-            # example: 0xd883209C4DCd497f24633C627a4E451013424841, sendFoods function
+            # example: 0x48fa97aDb417367a480D6b93FBC26CB0B8E93F5a, sendFoods function
             v = exp[0][4] >> 224
             res.append( pretty_fname(v, add_color) )
             idx += 1
